@@ -1,0 +1,177 @@
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    :root{
+      --light-red: hsl(0, 100%, 67%);
+      --orangey-yellow: hsl(39, 100%, 56%);
+      --green-teal: hsl(166, 100%, 37%);
+      --cobalt-blue: hsl(234, 85%, 45%);
+      --background-Light-slate-blue: hsl(252, 100%, 67%);
+      --background-Light-royal-blue: hsl(241, 81%, 54%);
+      --circle-Violet-blue: hsla(256, 72%, 46%, 1);
+      --circle-Persian-blue: hsla(241, 72%, 46%, 0);
+      --White: hsl(0, 0%, 100%);
+      --Pale-blue: hsl(221, 100%, 96%);
+      --Light-lavender: hsl(241, 100%, 89%);
+      --Dark-gray-blue: hsl(224, 30%, 27%);
+    }
+    body{
+      margin: 0;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+    .visual{
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    .card{
+      width: 650px;
+      height: 500px;
+      border-radius: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      /*overflow: hidden;*/
+      box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.1),
+                  30px 0px 70px rgba(0, 0, 0, 0.1),
+                  -30px 0px 70px rgba(0, 0, 0, 0.1);
+    }
+    .left-side{
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to top, var(--background-Light-royal-blue), var(--background-Light-slate-blue));
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 20px;
+    }
+    .left-side p:nth-child(1){
+      color: var(--Light-lavender);
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .contenedor-puntaje{
+      width: 100%;
+      height: 190px;
+      display: grid;
+      place-items: center;
+    }
+    .puntaje{
+      width: 190px;
+      height: 190px;
+      background-image: linear-gradient(to top, var(--circle-Persian-blue), var(--circle-Violet-blue));
+      border-radius: 50%;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      align-items: center;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+    .puntaje > span:nth-child(1){
+      color: var(--White);
+      font-size: 56px;
+      font-weight: bold;
+    }
+    .puntaje > span:nth-child(2){
+      color: var(--Light-lavender);
+      font-size: 18px;
+    }
+    .left-side p:nth-child(3){
+      color: var(--White);
+      font-size: 28px;
+      font-weight: bold;
+      margin:0;
+    }
+    .left-side p:nth-child(4){
+      color: var(--Light-lavender);
+      font-size: 16px;
+      padding: 0 25px;
+      margin: 0 0 20px 0;
+    }
+    .right-side{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: auto auto auto;
+      align-items: center;
+      padding: 30px;
+      box-sizing: border-box;
+      border-radius: 20px;
+    }
+    .right-side > p{
+      color: var(--Dark-gray-blue);
+      font-size: 22px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .contenedor-estadisticas{
+      width: 100%;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 12px;
+    }
+    .estadistica{
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      align-items: center;
+      gap: 12px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 16px;
+      font-weight: bold;
+    }.estadistica > p:nth-child(3){
+      color: var(--Dark-gray-blue);
+    }.estadistica > p:nth-child(4){
+      color: hsl(224, 30%, 27%, .5);
+    }
+    .reaction{
+      background: hsl(0, 100%, 67%, .1);
+    }.reaction > p:nth-child(2){
+      color: hsl(0, 100%, 67%);
+    }
+    .memory{
+      background: hsl(39, 100%, 56%, .1);
+    }.memory > p:nth-child(2){
+      color: hsl(39, 100%, 56%);
+    }
+    .verbal{
+      background: hsl(166, 100%, 37%, .1);
+    }.verbal > p:nth-child(2){
+      color: hsl(166, 100%, 37%);
+    }
+    .vizual{
+      background: hsl(234, 85%, 45%, .1);
+    }.vizual > p:nth-child(2){
+      color: hsl(234, 85%, 45%);
+    }
+    .primary-button{
+      border: 0;
+      border-radius: 24px;
+      background: var(--Dark-gray-blue);
+      color: var(--Pale-blue);
+      font-size: 14px;
+      font-weight: bold;
+    }.primary-button p{
+      margin: 16px 0;
+    }
+    @media (max-width: 375px) {
+      .card{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .left-side{
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+      }
+      .right-side{
+        width: 100%;
+      }
+    }
